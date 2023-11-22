@@ -39,7 +39,6 @@ export default function ProductList() {
       name: 'Brands',
       options: brands,
     },
-  
   ]
   const totalItems = useSelector(selectTotalItems)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
@@ -432,8 +431,8 @@ function ProductGrid({ products }) {
                       </p>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-900">{Math.round(product.price * (1 - product.discountPercentage / 100))}</p>
-                      <p className="text-sm font-medium line-through text-gray-400">{product.price}</p>
+                      <p className="text-sm font-medium text-gray-900">$ {Math.round(product.price * (1 - product.discountPercentage / 100))}</p>
+                      <p className="text-sm font-medium line-through text-gray-400">$ {product.price}</p>
                     </div>
                   </div>
                 </div>

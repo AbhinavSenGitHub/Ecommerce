@@ -2,14 +2,9 @@ import React, { useState, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   deleteItemFromCartAsync,
-  increment,
-  incrementAsync,
-  selectCount,
   selectItems,
   updateCartAsync,
 } from './cartSlice';
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
 export default function Cart() {
   // const count = useSelector(selectCount)
@@ -48,7 +43,7 @@ export default function Cart() {
                         <h3>
                           <a href={item.href}>{item.title}</a>
                         </h3>
-                        <p className="ml-4">{item.price*item.quantity}</p>
+                        <p className="ml-4">$ {item.price*item.quantity}</p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">{item.brand}</p>
                     </div>
